@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/compiled.css" />
+  </head>
+  <body>
+    <div class="container mx-auto">
+      <div class="flex flex-col h-screen">
+        <h1 class="text-3xl font-bold p-4">Simple Restful API</h1>
+        <div class="flex justify-end mb-4">
+          <button
+            id="tambah-btn"
+            class="mt-4 bg-green-600 text-white px-4 py-2 rounded"
+          >
+            Tambah Mahasiswa
+          </button>
+        </div>
+
+        <table class="w-full text-left table-auto min-w-max">
+          <thead>
+            <tr>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                  class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70"
+                >
+                  No
+                </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                  class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70"
+                >
+                  Nama
+                </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                  class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70"
+                >
+                  NIM
+                </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                  class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70"
+                >
+                  Jurusan
+                </p>
+              </th>
+              <th class="p-4 border-b border-blue-gray-100 bg-blue-gray-50">
+                <p
+                  class="block font-sans text-sm antialiased font-normal leading-none text-blue-gray-900 opacity-70"
+                >
+                  Aksi
+                </p>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="mahasiswa-list"></tbody>
+        </table>
+
+        <!-- Modal -->
+        <div
+          id="mahasiswa-modal"
+          class="hidden fixed inset-0 bg-black/50 flex justify-center items-center z-50"
+        >
+          <form
+            id="mahasiswa-form"
+            class="bg-white p-6 rounded shadow-md w-[300px]"
+          >
+            <h2 class="text-lg font-bold mb-4">Form Mahasiswa</h2>
+
+            <input
+              id="nama"
+              type="text"
+              placeholder="Nama"
+              class="w-full border px-2 py-1 mb-3"
+              required
+            />
+            <input
+              id="nim"
+              type="text"
+              placeholder="NIM"
+              class="w-full border px-2 py-1 mb-3"
+              required
+            />
+            <input
+              id="jurusan"
+              type="text"
+              placeholder="Jurusan"
+              class="w-full border px-2 py-1 mb-3"
+            />
+
+            <div class="flex justify-between">
+              <button
+                type="submit"
+                class="bg-blue-600 text-white px-3 py-1 rounded"
+              >
+                Simpan
+              </button>
+              <button
+                type="button"
+                id="close-modal"
+                class="bg-gray-500 text-white px-3 py-1 rounded"
+              >
+                Batal
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/service.js"></script>
+    <script src="./js/index.js" type="module"></script>
+  </body>
+</html>

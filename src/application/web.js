@@ -4,6 +4,8 @@ import { apiRouter } from "../route/api.js";
 
 export const web = express();
 
+web.use(express.static("public"));
+
 web.use(express.json());
 web.use(apiRouter);
 
